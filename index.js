@@ -13,8 +13,12 @@ app.use(cors());
 
 
 // The route to initiate the login process
-app.get("/home", (req, res) => {
-    res.send("Homepage")
+app.get("/", (req, res) => {
+    res.send(`<div>
+        <p>for login : <a href="https://questlab.onrender.com/auth/reddit">https://questlab.onrender.com/auth/reddit</a></p>
+        <p>for users list : <a href="https://questlab.onrender.com/user">https://questlab.onrender.com/user/</a></p>
+        <p>for posts list : <a href="https://questlab.onrender.com/posts">https://questlab.onrender.com/posts/</a></p>
+    </div>`)
 })
 
 app.use("/", user_route);
